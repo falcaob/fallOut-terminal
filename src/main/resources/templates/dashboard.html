@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+	<title>Terminal</title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<div>
+		<a th:href="@{/survivors/list}">
+			<h2>[Admisiones de residencia]</h2>
+		</a>
+		
+		<a th:href="@{/survivors/evacuation}">
+			<h2>[Protocolos de evacuación]</h2>
+		</a>
+				
+		<a>
+			<h2>[Investigar zonas seguras (SpringII)]</h2>
+		</a>
+	</div>
+</body>
+
+</html>

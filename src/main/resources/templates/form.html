@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+	<title th:text="${title}"></title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<br>
+	<h1 th:text="${title}"></h1>
+	<div class="survivor-form-table">
+		<form action="#" th:action="@{/survivors/form}" th:object="${survivor}" method="post">
+			<table>
+				<tr>
+					<td>Nombre</td>
+					<td>> <input type="text" th:field="*{name}" /></td>
+					<td th:if="${#fields.hasErrors('name')}"><small th:errors="*{name}"
+							class="form-text text-danger"></small></td>
+				</tr>
+
+				<tr>
+					<td>Edad</td>
+					<td>> <input type="number" th:field="*{age}" /></td>
+					<td th:if="${#fields.hasErrors('age')}"><small th:errors="*{age}"
+							class="form-text text-danger"></small></td>
+				</tr>
+
+				<tr>
+					<td>Sexo</td>
+					<td>> <input type="text" th:field="*{sex}" /></td>
+					<td th:if="${#fields.hasErrors('sex')}"><small th:errors="*{sex}"
+							class="form-text text-danger"></small></td>
+				</tr>
+
+				<tr>
+					<td>Enfermedad</td>
+					<td>> <input type="checkbox" th:field="*{disease}" /></td>
+				</tr>
+				
+				<tr>
+					<td>Supervisor</td>
+					<td>> <input type="number" name="overseerId" /></td>
+					<td th:if="${#fields.hasErrors('overseer')}"><small th:errors="*{overseer}" class="form-text text-danger"></small></td>
+				</tr>
+				
+			</table>
+			
+			<button type="submit" value="Guardar">[Guardar]</button>
+
+			<input type="hidden" th:field="*{idSurvivor}" />
+		</form>
+	</div>
+	
+	<button><a class="btn btn-primary btn-xs" th:href="@{/survivors/list}">[Volver]</a></button>
+</body>
+
+</html>

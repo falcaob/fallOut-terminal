@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+	<title>Evacuation</title>
+</head>
+
+<body>
+
+	<div th:replace="header :: header"></div>
+	<h1>Instrucciones de Evacuación</h1>
+	<img src="/images/evacuation.png" alt="Evacuation" width="450" height="auto">
+	<ol>
+		<li><strong>Mantén la calma y da instrucciones claras.</strong><br>Controla la situación, da instrucciones
+			precisas y tranquiliza a los refugiados.</li>
+		<li><strong>Verifica el equipo de protección.</strong><br>Asegúrate de que todos estén equipados con el equipo
+			adecuado antes de evacuar.</li>
+		<li><strong>Coordina la evacuación ordenada.</strong><br>Dirige a los refugiados por las rutas de evacuación de
+			manera organizada, evitando pánico.</li>
+		<li><strong>Supervisa el uso de las escaleras.</strong><br>Garantiza que todos usen las escaleras y mantengan la
+			distancia adecuada.</li>
+		<li><strong>Asegúrate de que todos estén a salvo.</strong><br>Verifica que todos lleguen al punto seguro y no
+			regresen hasta que se autorice.</li>
+	</ol>
+	
+	<br>
+	
+	<button><a class="btn btn-primary btn-xs" th:href="@{/dashboard}">[Volver]</a></button>
+
+</body>
+</html>

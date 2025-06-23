@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+	<title th:text="${title}"></title>
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+	<div>
+		<table>
+			<h1 th:text="${title}"></h1>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Nombre</td>
+					<td>Edad</td>
+					<td>Sexo</td>
+					<td>Enfermedad</td>
+					<td>Supervisor</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="survivor: ${survivors}">
+					<td th:text="${survivor.idSurvivor}"></td>
+					<td th:text="${survivor.name}"></td>
+					<td th:text="${survivor.age}"></td>
+					<td th:text="${survivor.sex}"></td>
+					<td th:text="${survivor.disease ? 'Sí' : 'No'}"></td>
+					<td th:text="${survivor.overseer != null ? survivor.overseer.idOverseer : 'Sin supervisor'}"></td>
+					
+					<td><a class="btn btn-danger btn-xs" th:href="@{/survivors/delete/{id}(id=${survivor.idSurvivor})}">[Borrar]</a></td>
+
+					<td><a class="btn btn-primary btn-xs" th:href="@{/survivors/form2/{id}(id=${survivor.idSurvivor})}">[Editar]</a></td>
+				</tr>			
+			</tbody>
+		</table>
+		
+		<button><a class="btn btn-primary btn-xs" th:href="@{/survivors/form}">[Registrar nuevo Superviviente]</a></button>
+		<br>
+		<br>
+		<button><a class="btn btn-primary btn-xs" th:href="@{/dashboard}">[Volver]</a></button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Monofonto';
+  src: url('/fonts/monofonto.otf') format('opentype');
+}
+
+body {
+  font-family: 'Monofonto', monospace;
+  background-color: black;
+  color: #00ff66;
+}
+
+button {
+  font-family: 'Monofonto', monospace;
+  all: unset;
+  color: #00ff66;
+}
+
+input {
+    background-color: transparent;
+    color: #00ff66;
+    border: none;
+    outline: none;
+    font-family: 'Monofonto', monospace;
+}
+
+button:hover {
+    background-color: #00ff66; 
+    color: black; 
+}
+
+label, input {
+    font-size: 27px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 27px;
+	display: block;
+	width: fit-content;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #00ff66;
+    color: black;
+}
+
+.center-container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; 
+	margin: 0;
+}
+
+.login-container {
+  border: 1px solid #00ff66;
+  padding: 20px;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+
+
+table {
+    width: 100%;
+	max-width: calc(100% - 40px);
+    border-collapse: collapse;
+    margin:20px;
+	font-size: 25px;
+}
+
+thead tr {
+    border-bottom: 3px solid #00ff66; /* Línea que separa la cabecera */
+}
+
+tbody tr {
+    border-bottom: 1px dashed #00ff66; /* Línea que separa cada fila de superviviente */
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+    color: #00ff66;
+	margin: 0;
+}
+
+/* Especifico solo para la vista de los supervivientes */
+.survivor-form-table {
+	border: 1px solid #00ff66; 
+	border-collapse: collapse; 
+	margin: 20px 0;
+	max-width: 600px; 
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+/* Eliminar la línea dashed de las filas en la tabla de supervivientes */
+.survivor-form-table tbody tr {
+    border-bottom: none;
+}
+
+/* Estilo base para el checkbox */
+.survivor-form-table input[type="checkbox"] {
+    -webkit-appearance: none;  /* Elimina el estilo predeterminado del navegador */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;  
+    height: 20px;
+    border: 1px solid #00ff66; 
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo cuando el checkbox está marcado */
+.survivor-form-table input[type="checkbox"]:checked {
+    background-color: #00ff66; 
+}
+
+/* Estilo para el check dentro del checkbox */
+.survivor-form-table input[type="checkbox"]:checked::before {
+    content: ''; /* Necesario para mostrar el check */
+    position: absolute;
+    top: 4px;  
+    left: 4px; 
+    width: 5px; 
+    height: 5px;
+}
+
+/* Hover en el checkbox */
+.survivor-form-table input[type="checkbox"]:hover {
+    border-color: #00994d; 
+}
