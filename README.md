@@ -20,11 +20,10 @@ Built with **Spring Boot**, **Thymeleaf**, and custom CSS, it allows secure logi
 - CSS (custom font + styling)
 
 ### 🖼️ Preview
-
-![Terminal Interface Preview](images/screenshot.png)
-
 > *Inspired by Fallout™ aesthetics and terminal design*
 
---
-
-© 2077 Vault-Tec Corporation. All rights reserved™.
+<p align="center">
+  <img src="images/screenshot1.png" alt="Terminal Interface Preview" width="600"/>
+  <img src="images/screenshot2.png" alt="Terminal Interface Preview" width="600"/>
+  <img src="images/screenshot3.png" alt="Terminal Interface Preview" width="600"/>
+</p>
